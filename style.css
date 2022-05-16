@@ -1,4 +1,4 @@
-﻿*{
+*{
     margin:0;
     padding:0;
     box-sizing:border-box;
@@ -23,6 +23,7 @@ body {
 .text {
     font-family: SF Pro Display,sans-serif;
     font-style: normal;
+    line-height:150%;
 }
 .white{
     color:white;
@@ -37,6 +38,10 @@ body {
     font-size: 2.2rem;
     line-height: 2.9rem;
 }
+.medium-l {
+    font-size: 3rem;
+    line-height: 3.3rem;
+}
 .large {
     font-size: 7.2rem;
     line-height: 8.6rem;
@@ -46,6 +51,10 @@ body {
     line-height:1.9rem;
 }
 /*helper classes end*/
+#bitmoji-wrapper{
+    width:400px;
+    height:400px;
+}
 #container {
     width: 100vw;
     height: auto;
@@ -108,10 +117,9 @@ margin-left:1rem;
 .content-text{
     display:flex;
     flex-direction:column;
-    margin-left:2rem;
 }
 .content-text span, .content-text button {
-        margin-top: 2rem;
+      /*  margin-top: 2rem;*/
     }
 
 .btn span{
@@ -120,16 +128,16 @@ margin-left:1rem;
 .content {
     display: flex;
     justify-content: space-between;
-}   
+}
 .section-left {
-    width: 30rem;
-    position: relative;
+    width: 50%;
+    /* position: relative; */
     display: flex;
     flex-direction: column;
+    margin-top: 9%;
 }
 .section-right {
-    width: 60rem;
-    align-content: center;
+    align-content: flex-end;
     margin-top: 9%;
 }
 .section-right img{
@@ -139,11 +147,18 @@ margin-left:1rem;
 /*.section-left div{
     margin-bottom:1.6rem;
 }*/
+    .justify-center{
+    justify-content:center;
+
+}
+.align-center{
+    align-items:center;
+}
 .btn {
-    width: 18.7rem;
+    width: 15rem;
     height: 4.8rem;
     background: #0fb;
-    border:none;
+    border: none;
     border-radius: 3rem;
     cursor: pointer;
     display: flex;
@@ -194,6 +209,10 @@ margin-left:1rem;
 /*    animation: move-3 11s 1s infinite;*/
     opacity:.7;
 }
+nav ul li{
+    cursor:pointer;
+}
+    
 #triangle-2 {
     transition: 3s all;
     top: 0;
@@ -426,7 +445,7 @@ margin-left:1rem;
 }
 
 .about .about-text {
-    width:50%;
+    width:70%;
     overflow: hidden;
     color: azure;
     text-align: left;
@@ -454,7 +473,8 @@ margin-left:1rem;
 }
 
 .text {
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
+    line-height:150%;
 }
 
     .text p {
@@ -462,7 +482,9 @@ margin-left:1rem;
         color: #fff;
         margin-bottom: 2.4rem;
     }
-
+.intro-text{
+    line-height: 150%;
+}
 .download {
     width: 10rem;
     height: 20%;
@@ -920,22 +942,31 @@ margin-left:1rem;
 
 footer {
     display: flex;
-    flex-wrap: wrap;
+    align-items:center;
     justify-content: space-around;
-    background: #212121;
 }
 
 .logo-section {
-    width: 13%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
+.footer-wrapper{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    width:80%;
+}
+.footer-left {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+}
 
 .copyright {
+    display:flex;
+    align-items:center;
     color: #fff;
-    width: 20%;
-    margin: auto;
 }
 .section{
     margin-bottom:15rem;
@@ -949,11 +980,9 @@ service-card p {
 
 }
 .logo-section a{
-    margin-left:20px;
+    margin-left:10px;
 }
-.logo-me{
-    width:20%;
-}
+
 .section {
     width: 100%;
     margin: auto;
@@ -976,58 +1005,176 @@ service-card p {
 #home{
     padding-top:10rem;
 }
+#tech-stack{
+    display:flex;
+    justify-content:space-between;
+    flex-direction:column;
+}
+#services .section-left{
+    margin-top:4rem;
+}
+.flex-row{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+}
+#services .section-right {
+    width: 40%;
+    margin-top: 4rem;
+    text-align: center;
+}
+.tech-stack-row{
+    margin-top:5rem;
+}
+.tech-stack-description {
+    width: 80%;
+    border: 1px solid white;
+    border-radius: 8%;
+}
+.description-img {
+    margin-top: 3rem;
+    
+}
+    .description-img img {
+        width: 150px;
+        height: 150px;
+    }
+    .flex-center {
+        display: flex;
+        justify-content: center;
+    }
+.skill-btn {
+    background:white;
+    width:100px;
+    height: 100px;
+}
+    .skill-btn img {
+        width: 80px;
+        height: 80px;
+        border-radius: 20%;
+    }
+.skill-btn {
+    border-radius: 20%;
+    overflow: hidden;
+}
+    .skill-btn:hover {
+        cursor: pointer;
+        opacity:.9;
+    }
+
+.description-img img{
+border-radius:20%;
+}
+.description-title{
+    margin-top:2rem;
+}
+.project-count{
+    margin-top:1rem;
+}
+.experience {
+    margin-bottom:8rem;
+    margin-top: 1rem;
+}
+.fn-700{
+    font-weight:700;
+}
+.btn-an:hover{
+    opacity:.9;
+    color:white;
+
+}
 @media screen and (max-width: 1300px) {
-    html{
-        font-size:45%;
+    html {
+        font-size: 45%;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    
+    html {
+        font-size: 40%;
+    }
+    #home .section-right{
+        display:none;
+    }
+    #home .section-left {
+   width:70%;
+   margin:auto;
+    }
+    #home .btn{
+        margin-bottom:3rem;
+    }
+    .services-container .section-left {
+        width:100%;
+        margin-bottom:3rem;
+        }
+    #services .section-right{
+        width:70%;
+    }
+    #contact .section-left{
+        width:100%;
+        margin:auto;
+        text-align:center;
+        align-items:center;
+        justify-content:center;
+    }
+    #contact .section-right {
+        width: 50%;
+    }
+    .header-wrapper {
+        justify-content: center;
+    }
+
+        .header-wrapper nav {
+            display: none;
+        }
+
+    .img-wrapper {
+        display: none;
+    }
+
+    .image-me {
+        display: none;
+    }
+
+    .about-text {
+        margin: auto;
+    }
+
+
+    .service-card {
+        width: 50%;
+    }
+
+    .work-flow-card {
+        width: 45%;
+    }
+
+    .portfolio-card {
+        width: 90%
+    }
+
+    .contact-inner .section-left {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .contact-inner .section-right {
+        margin: auto;
+    }
+
+    #contact .section-right {
+        margin-top: 10rem;
     }
 }
 
 @media screen and (max-width: 700px) {
     html {
-        font-size: 40%;
-    }
-    .header-wrapper{
-        justify-content:center;
-    }
-    .header-wrapper nav {
-        display: none;
-    }
-    .img-wrapper{
-        display:none;
-    }
-    .image-me{
-        display:none;
-    }
-    .about-text{
-        margin:auto;
+        font-size: 35%;
     }
 
     
-    .service-card {
-        width:50%;
-    }
-    .work-flow-card{
-        width:45%;
-    }
-    .portfolio-card {
-        width:90%
-    }
-    .contact-inner .section-left {
-        width:100%;
-        justify-content:center;
-    }
-    .contact-inner .section-right{
-        margin:auto;
-    }
-    #contact .section-right {
-        margin-top: 10rem;
-    }
 }
-@media screen and (max-width: 700px){
-    html{
-        font-size:35%;
-          }
-    .logo-me{
-        width:15%
-    }
+.logo-section a img{
+    height:20px;
 }
