@@ -1,27 +1,34 @@
 "use strict"
-
-    function change() {
+var skill = [{ skillName: "JavaScript", img: "https://user-images.githubusercontent.com/85919501/128709937-80b78fc4-841e-4bbc-8f4a-3f8592046c54.png?techName=undefined&projectsCount=10&experience=0.9", numberOfProjects: 4, experience: 1 },
+    {
+        skillName: "React", img: "https://cdn.freebiesupply.com/logos/large/2x/react-1-logo-png-transparent.png", numberOfProjects: 2, experience: .7
+    }, {
+        skillName: "HTML", img: "https://user-images.githubusercontent.com/85919501/128709932-8d785243-3226-40fd-b492-f97401d9f458.png?techName=undefined&projectsCount=10&experience=0.9", numberOfProjects: 4, experience: 1
+    }, {
+        skillName: "React Bootstrap", img: "https://avatars.githubusercontent.com/u/6853419?s=200&v=4", numberOfProjects: 4, experience: 1
+    }, {
+        skillName: "Bootstrap", img: "https://www.logo.wine/a/logo/Bootstrap_(front-end_framework)/Bootstrap_(front-end_framework)-Logo.wine.svg", numberOfProjects: 4, experience: 1
+    }, {
+        skillName: "Java", img: "https://thumbs.dreamstime.com/b/java-logo-java-logo-white-background-vector-format-available-127575473.jpg", numberOfProjects: 4, experience: 1
+    }];
+function change() {
         var random = document.getElementsByClassName("random-box")[0].getElementsByClassName("move");
         var z = 1;
         var ul = document.getElementById("header-ul");
         var list = ul.getElementsByTagName("li")
         for (var j = 0; j < list.length; j++) {
-            console.log("list[j].classList" + list[j].classList);
             if (list[j].classList.contains("glow")) {
                 z = j+1;
             }
         }
-        console.log(z);
         for (var i = 0; i < random.length; i++) {
             var x = random[i].id;
-            console.log(op + "op");
             var ranTop = Math.floor(Math.random() *300);
             var ranLeft = Math.floor(Math.random() * 90);
             document.getElementById(x).style.top = ranTop+"%";
             document.getElementById(x).style.left = ranLeft+"%";
     }
     }
-    setInterval(change, 3000);
 
 function move(flag) {
     if (flag == true) {
@@ -50,8 +57,6 @@ function calculateVisibilityForDiv(div) {
     var result = ((windowHeight - divPosition) * 100) / windowHeight;
     return result;
 }
-
-window.addEventListener(onscroll, sp);
 function sp(){
     var current = "";
     var a = document.getElementById("op");
@@ -73,7 +78,6 @@ function sp(){
         }
     }
 };
-//nikita js
 function changeHeader() {
     var sections = document.getElementsByTagName("section");
     for (var i = 0; i < sections.length; i++) {
@@ -107,7 +111,33 @@ function changeScreen(self) {
     sectionDiv.classList.add("active");
 
 }
-
-
-
+function changeDescription(self) {
+    document.getElementById("tech-stack").getElementsByClassName("active")[0].classList.remove("active");
+    var target = document.getElementById("decription-box");
+    var ind = self.dataset.index;
+    var val = skill[ind];
+    target.getElementsByTagName("img")[0].src = val.img;
+    document.getElementById("count").innerText = val.numberOfProjects;
+    document.getElementById("exp-count").innerText = val.experience + " yrs";
+    document.getElementById("skillll").innerHTML = val.skillName;
+    console.log(val);
+    self.classList.add("active");
+}
+function changeHeading() {
+    var a = "Anmol Ahuja | Frontend Developer";
+    if (document.title.length == a.length) {
+        document.title = "Welcome";
+    }
+    else {
+        document.title = a;
+    }
+}
+setInterval(change, 3000);
+setInterval(changeHeading, 3000);
 window.addEventListener("scroll", changeHeader)
+window.addEventListener(onscroll, sp);
+
+
+function sendEmail() {
+    var msg = document.getElementById("message").innerText;
+}
