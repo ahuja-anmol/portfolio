@@ -23,7 +23,7 @@ function change() {
         }
         for (var i = 0; i < random.length; i++) {
             var x = random[i].id;
-            var ranTop = Math.floor(Math.random() *300);
+            var ranTop = Math.floor(Math.random() *100);
             var ranLeft = Math.floor(Math.random() * 90);
             document.getElementById(x).style.top = ranTop+"%";
             document.getElementById(x).style.left = ranLeft+"%";
