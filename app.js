@@ -120,7 +120,6 @@ function changeDescription(self) {
     document.getElementById("count").innerText = val.numberOfProjects;
     document.getElementById("exp-count").innerText = val.experience + " yrs";
     document.getElementById("skillll").innerHTML = val.skillName;
-    console.log(val);
     self.classList.add("active");
 }
 function changeHeading() {
