@@ -11,6 +11,12 @@ var skill = [{ skillName: "JavaScript", img: "https://user-images.githubusercont
     }, {
         skillName: "Java", img: "https://thumbs.dreamstime.com/b/java-logo-java-logo-white-background-vector-format-available-127575473.jpg", numberOfProjects: 4, experience: 1
     }];
+function gebid(id) {
+    return document.getElementById(id);
+}
+function gecn(className) {
+    return document.getElementsByClassName(className)[0];
+}
 function change() {
         var random = document.getElementsByClassName("random-box")[0].getElementsByClassName("move");
         var z = 1;
@@ -23,7 +29,7 @@ function change() {
         }
         for (var i = 0; i < random.length; i++) {
             var x = random[i].id;
-            var ranTop = Math.floor(Math.random() *100);
+            var ranTop = Math.floor(Math.random() *460);
             var ranLeft = Math.floor(Math.random() * 90);
             document.getElementById(x).style.top = ranTop+"%";
             document.getElementById(x).style.left = ranLeft+"%";
@@ -138,5 +144,47 @@ window.addEventListener(onscroll, sp);
 
 
 function sendEmail() {
-    var msg = document.getElementById("message").innerText;
+    var flag = true;
+    var arr = document.getElementsByClassName("data");
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i].classList.contains("email")) {
+            flag = validateEmail(arr[i].value);
+        }
+        else if (arr[i].classList.contains("number")) {
+            flag = validateNumber(arr[i].value);
+        }
+        else if (arr[i].value.length == 0) {
+            flag = false;
+        }
+    }
+    if (flag == false) {
+        alert("Please fill all details");
+    }
+    else {
+        var btn = gebid("sendEmail-btn");
+        setTimeout(function (text) {
+            btn.innerText = "Submit";
+        }, 3000);
+        btn.innerText = "Sent";
+    }
+}
+function hireMe() {
+    gebid("contact").scrollIntoView({ behavior: "smooth"});
+}
+function downloadCV() {
+    window.open("resume.pdf");
+}
+function validateEmail(input) {
+    var emailValidRegex = /^([a-zA-Z\d])([a-zA-Z\d\.]+([\-_+]{1})?)+@([a-zA-Z\d-]+)\.([a-z]{2,10})(\.[a-z]{2,10})?$/;
+    if (input.match(emailValidRegex)) {
+        return true;
+    }
+    return false;
+}
+function validateNumber(input) {
+    var phoneValidRegex = /^((\+|(00))?91|0)?[6789]{1}\d{9}$/;
+    if (input.match(phoneValidRegex)) {
+        return true;
+    }
+    return false;
 }
