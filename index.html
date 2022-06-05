@@ -5,8 +5,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>Anmol Ahuja | Frontend Developer</title>
+    <link rel="icon" type="image/x-icon" href="https://github.com/ahuja-anmol/test/blob/main/Img/ANMOL_ahuja__2_-removebg-preview.png?raw=true">
     <link rel="icon" type="image/x-icon" href="logo.img">
-<link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
     <div id="container page">
@@ -17,12 +18,11 @@
                 </span>
                 <nav>
                     <ul id="header-ul" class="header-ul white small">
-                        <li class="home glow small white ul"><a onclick="changeScreen(this)">Home</a></li>
-                        <li class="about small white ul"><a onclick="changeScreen(this)">About</a></li>
-                        <li class="services small white ul"><a onclick="changeScreen(this)">Services</a></li>
-                        <li class="portfolio small white ul"><a onclick="changeScreen(this)">Portfolio</a></li>
-                        <li class="contact small white ul"><a onclick="changeScreen(this)">Contact Me</a></li>
-                        <li><button class="btn small btn-an">Case Studies</button></li>
+                        <li class="home glow small white ul"><a   onclick="changeScreen(this)">Home</a></li>
+                        <li class="about small white ul"><a   onclick="changeScreen(this)">About</a></li>
+                        <li class="services small white ul"><a   onclick="changeScreen(this)">Tech-Stack</a></li>
+                        <li class="contact small white ul"><a  onclick="changeScreen(this)">Contact Me</a></li>
+                        <li><button class="btn small btn-an"  onclick="hireMe()">Let' Connect</button></li>
                     </ul>
 
                 </nav>
@@ -51,7 +51,7 @@
 
                             <span class="text small white intro-text">I’m a professional  Software Developer with front end development skills .</span>
                             <button class="btn">
-                                <span class="medium black btn-an">
+                                <span class="medium black btn-an" onclick="hireMe()">
                                     Hire Me
                                 </span>
                             </button>
@@ -71,9 +71,6 @@
 
             <section class="about section" id="about">
                 <div class="content justify-center">
-                    <!--<div class="image-me" data-aos="fade-right">
-                        <img src="https://res.cloudinary.com/kemkem-dev/image/upload/c_scale,h_489/v1601063614/portfolio/kemi_rbclwr.jpg" alt="kemi adeleke profile picture" loading="lazy">
-                    </div>-->
                     <div class="about-text">
                         <div class="header-about-me header">
                             <div class="header-text1 glow small">
@@ -83,12 +80,12 @@
                             <div class="header-text2"><h3 class="medium">About Me</h3></div>
                         </div>
                         <div class="text intro-text">
-                            <p class=" small white intro-text"> I’m Oluwakemi Adeleke, a professional and talented <em>Product Designer</em> with front end development skills. I am passionate about leveraging my diverse backgrounds to decipher challenging problems and create delightful experiences. I honed my skills at web development, technical writing, product design and SEO analytics. </p>
-                            <p class="text black small intro-text"> I develop websites with HTML, CSS and JavaScript. I have top skills in using design softwares like Figma, Adobe XD, Invision and PhotoShop; with prototype tools like Framer and Protopie. </p>
-                            <p class="text black small intro-text"> Being a diligent, hardworking and result oriented lady, I always work towards achieving best result on each project I lay my hands on. </p>
+                            <p class=" small white intro-text">I’m Anmol Ahuja, a professional and talented Software Developer with front-end development skills. </p>
+                            <p class="text black small intro-text"> I am pursuing My bachelor's from Chandigarh University, in the field of Computer Science. I develop websites with HTML, CSS, and JavaScript.And I have created some projects using React also. I have good problem-solving skills. Also, I have good knowledge of JAVA. And I love to do Data Structure in my free time.</p>
+                            <p class="text black small intro-text">That's all about me. And I would love to hear your story :) </p>
                         </div>
                         <div class="flex justify-center align-center btn-an">
-                            <a class="btn small " href=""><span>Download CV</span></a>
+                            <button class="btn small btn-an " onclick="downloadCV()"><span>Download CV</span></button>
                         </div>
                     </div>
 
@@ -108,30 +105,6 @@
                         </div>
                     </div>
                     <div class="services-container">
-                        <!--<div class="service-card one">
-                            <div>
-                                <img src="https://www.kemiadeleke.com/media/react-logo.svg" alt="">
-
-                            </div>
-                            <h5 class="medium text">Product Design</h5>
-                            <p class="small text"> I work with certain design tools to create high-fidelity designs and prototypes. I design accessible and usable products which aid business growth. </p>
-                        </div>
-                        <div class="service-card two">
-                            <div>
-                                <img src="https://www.kemiadeleke.com/media/brackets.svg" alt="">
-
-                            </div>
-                            <h5 class="medium text">Website Development</h5>
-                            <p class="small text"> I use various web technologies to develop attractive websites which converts visitors to customers. I develop creative and responsive website layouts.  </p>
-                        </div>
-                        <div class="service-card three">
-                            <div>
-                                <img src="https://www.kemiadeleke.com/media/digital-marketing.svg" alt="">
-
-                            </div>
-                            <h5 class="medium text">Digital Marketing</h5>
-                            <p class="small text">  I identify and evaluates new digital technologies and use web analytics tools to measure site traffic to better optimize marketing campaigns.  </p>
-                        </div>-->
                         <div class="section-left">
                             <div id="tech-stack">
                                 <div class="tech-stack-row flex-row">
@@ -198,55 +171,6 @@
                 </div>
 
             </section>
-            <section id="work-flow" class=" services work-flow section">
-                <div class="content flex">
-
-                    <div class="header work-flow-header">
-                        <div class="header-text1 glow">
-                            <span class="small">Work Flow</span>
-                            <span class="line"></span>
-                        </div>
-                        <div class="header-text2 medium">
-                            <h3>My Work Process</h3>
-                        </div>
-                    </div>
-                    <div class="work-flow-container">
-                        <div class="work-flow-card one">
-                            <div class="bottom">
-                                <img src="https://www.kemiadeleke.com/media/work-idea.svg" alt="">
-
-                            </div>
-                            <h5 class="medium bottom">Discover</h5>
-                            <p class="small bottom"> I conduct user research to identify the problem I want to solve. </p>
-                        </div>
-                        <div class="work-flow-card two bottom">
-                            <div class="bottom">
-                                <img src="https://www.kemiadeleke.com/media/work-plan.svg" alt="">
-
-                            </div>
-                            <h5 class="medium bottom">Define</h5>
-                            <p class="small bottom"> I brainstorm possible design solutions to the identified problem. </p>
-                        </div>
-                        <div class="work-flow-card three">
-                            <div class="bottom">
-                                <img src="https://www.kemiadeleke.com/media/work-sketch.svg" alt="">
-
-                            </div>
-                            <h5 class="medium bottom">Ideate</h5>
-                            <p class="small bottom"> I create wireframes and sketches of the product I’m about to design.  </p>
-                        </div>
-
-                        <div class="work-flow-card four bottom">
-                            <div class="bottom">
-                                <img src="https://www.kemiadeleke.com/media/implement.svg" alt="">
-
-                            </div>
-                            <h5 class="medium bottom">Implement</h5>
-                            <p class="small bottom"> After designing, I deliver for implementation.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
             <section id="contact" class="contact section">
                 <div class="content flex">
 
@@ -261,7 +185,7 @@
                         </div>
                         <div class="header-text3">
                             <p class="description small">
-                                I am available to work on your projects and bring your ideas to life. I am just a click away.
+                                I am just a click away : )
                             </p>
                         </div>
                     </div>
@@ -277,27 +201,27 @@
                                 <div class="contact-image">
                                     <img src="https://www.kemiadeleke.com/media/contact-email.svg" alt="">
                                 </div>
-                                <a class="small white" href="mailto:oluwakemiadeleke20@gmail.com">anmolahuja403@gmail.com</a>
+                                <a target="_blank"  class="small white" href="mailto:oluwakemiadeleke20@gmail.com">anmolahuja403@gmail.com</a>
                             </div>
                             <div class="column column-three">
                                 <div class="contact-image">
                                     <img src="https://www.kemiadeleke.com/media/contact-phone.svg" alt="">
                                 </div>
-                                <a href="tel:+234-813-640-4552" class="small white">+91 989650-00860</a>
+                                <a target="_blank"  href="tel:+234-813-640-4552" class="small white">+91 989650-00860</a>
                             </div>
                         </div>
-                        <div class="section-right">
+                        <div class="section-right" id="contact-data">
                             <form class="contact-form">
-                                <input type="text" placeholder="Full Name" name="name" required="" class="small">
+                                <input type="text" placeholder="Full Name" name="name" class="small data">
                             </form>
                             <div class="form-two">
-                                <input type="email" placeholder="Email" name="name" required="" class="small">
+                                <input type="email" placeholder="Email" name="name" class="small data email" id="email">
                                 </div>
                             <div class="form-two">   
-                                <input type="number" placeholder="Phone Number" name="name" required="" class="small">
+                                <input type="number" placeholder="Phone Number" name="name"  class="small data number">
                             </div>
-                            <textarea name="message" id="message" cols="30" rows="10" placeholder="Enter your message" required="" class="small"></textarea>
-                            <button class="form-submit small btn-an " type="submit" onclick="sendEmail()">Submit</button>
+                            <textarea name="message" id="message" cols="30" rows="10" placeholder="Enter your message"  class="small data"></textarea>
+                            <button class="form-submit small btn-an " type="submit" onclick="sendEmail()" id="sendEmail-btn">Submit</button>
                         </div>
                     </div>
                 </div>
@@ -309,14 +233,15 @@
             <div class="footer-wrapper">
                 <div class="footer-left">
                     <div class="logo-me">
-                        <img src="https://github.com/ahuja-anmol/test/blob/main/Img/ANMOL_ahuja__2_-removebg-preview.png?raw=true" alt="">
+                        <a target="_blank"  href="">
+                            <img src="https://github.com/ahuja-anmol/test/blob/main/Img/ANMOL_ahuja__2_-removebg-preview.png?raw=true" alt="">
+                        </a>
                     </div>
                 </div>
                 <div class="logo-section">
-                    <a > <img src="https://www.kemiadeleke.com/media/twitter.svg" alt="link to twitter account"> </a>
-                    <a > <img src="https://www.kemiadeleke.com/media/linkedin.svg" alt="link to linkedin account"> </a>
-                    <a > <img src="https://e7.pngegg.com/pngimages/914/758/png-clipart-computer-icons-logo-github-github-logo-logo-computer-program-thumbnail.png" alt="link to behance account"> </a>
-                    <a > <img src="https://www.kemiadeleke.com/media/whatsapp.svg" alt="link to whatsapp"> </a>
+                    <a target="_blank"  href="https://www.linkedin.com/in/anmol-ahuja-2168791ba/"> <img src="https://www.kemiadeleke.com/media/linkedin.svg" alt="link to linkedin account"> </a>
+                    <a target="_blank"  href="https://github.com/ahuja-anmol"> <img src="https://e7.pngegg.com/pngimages/914/758/png-clipart-computer-icons-logo-github-github-logo-logo-computer-program-thumbnail.png" alt="Github"> </a>
+                    <a target="_blank"  href="https://api.whatsapp.com/send?phone=919896500860&text=Hello%20Anmol%F0%9F%99%83%20!!   "> <img src="https://www.kemiadeleke.com/media/whatsapp.svg" alt="link to whatsapp"> </a>
                 </div>
             </div>
 
@@ -333,7 +258,6 @@
 
     </div>
    
-    </script>
     <script src="app.js"></script>
 </body>
 </html>
